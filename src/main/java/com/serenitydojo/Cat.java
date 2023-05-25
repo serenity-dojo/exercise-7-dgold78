@@ -1,6 +1,6 @@
 package com.serenitydojo;
 
-public class Cat extends Pet {
+public abstract class Cat extends Pet {
     private String name;
     private String favoriteToy;
     private int age;

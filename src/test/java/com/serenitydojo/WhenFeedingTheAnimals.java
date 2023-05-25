@@ -1,6 +1,7 @@
 package com.serenitydojo;
 
 import com.serenitydojo.model.Feeder;
+import com.serenitydojo.model.FoodType;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -10,36 +11,36 @@ public class WhenFeedingTheAnimals {
     public void shouldFeedCatsTuna() {
         Feeder feeder = new Feeder();
 
-        String food = feeder.feeds("Cat", false);
+        FoodType food = feeder.feeds("Cat", false);
 
-        Assert.assertEquals("Tuna", food);
+        Assert.assertEquals(FoodType.TUNA, food);
     }
 
     @Test
     public void shouldFeedHamstersCabbage() {
         Feeder feeder = new Feeder();
 
-        String food = feeder.feeds("Hamster", false);
+        FoodType food = feeder.feeds("Hamster", false);
 
-        Assert.assertEquals("Cabbage", food);
+        Assert.assertEquals(FoodType.CABBAGE, food);
     }
 
     @Test
     public void shouldFeedDogsDogFood() {
         Feeder feeder = new Feeder();
 
-        String food = feeder.feeds("Dog", false);
+        FoodType food = feeder.feeds("Dog", false);
 
-        Assert.assertEquals("Dog Food", food);
+        Assert.assertEquals(FoodType.DOG_FOOD, food);
     }
 
     @Test
     public void shouldFeedPremiumCatsPremiumFood() {
         Feeder feeder = new Feeder();
 
-        String food = feeder.feeds("Cat", true);
+        FoodType food = feeder.feeds("Cat", true);
 
-        Assert.assertEquals("Salmon", food);
+        Assert.assertEquals(FoodType.SALMON, food);
 
     }
 }
